@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Match Results | Kinetic Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary-dim": "#efc900",
+                "on-secondary-fixed-variant": "#006266",
+                "on-error": "#450900",
+                "tertiary": "#ffe792",
+                "surface-container": "#19191c",
+                "secondary-container": "#00696e",
+                "on-tertiary-fixed-variant": "#665500",
+                "error-container": "#b92902",
+                "on-primary-container": "#4a5e00",
+                "outline": "#767577",
+                "surface-container-lowest": "#000000",
+                "secondary-dim": "#00e5ee",
+                "surface-dim": "#0e0e10",
+                "on-surface-variant": "#adaaad",
+                "on-primary": "#516700",
+                "on-tertiary-fixed": "#453900",
+                "tertiary-fixed-dim": "#efc900",
+                "primary": "#f3ffca",
+                "on-tertiary": "#655400",
+                "on-secondary-fixed": "#004346",
+                "primary-dim": "#beee00",
+                "surface-container-low": "#131315",
+                "surface": "#0e0e10",
+                "error": "#ff7351",
+                "surface-bright": "#2c2c2f",
+                "secondary-fixed-dim": "#00e5ee",
+                "secondary-fixed": "#00f4fe",
+                "surface-container-high": "#1f1f22",
+                "tertiary-container": "#ffd709",
+                "on-surface": "#f9f5f8",
+                "on-error-container": "#ffd2c8",
+                "primary-fixed": "#cafd00",
+                "on-primary-fixed": "#3a4a00",
+                "surface-tint": "#f3ffca",
+                "primary-container": "#cafd00",
+                "on-tertiary-container": "#5b4b00",
+                "background": "#0e0e10",
+                "inverse-surface": "#fcf8fb",
+                "error-dim": "#d53d18",
+                "surface-variant": "#262528",
+                "inverse-on-surface": "#565557",
+                "on-secondary": "#00575b",
+                "tertiary-fixed": "#ffd709",
+                "secondary": "#00f4fe",
+                "on-background": "#f9f5f8",
+                "on-secondary-container": "#dffdff",
+                "primary-fixed-dim": "#beee00",
+                "inverse-primary": "#516700",
+                "on-primary-fixed-variant": "#526900",
+                "outline-variant": "#48474a",
+                "surface-container-highest": "#262528"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk"],
+                "body": ["Manrope"],
+                "label": ["Lexend"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+        }
+        .glass-panel {
+            backdrop-filter: blur(24px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .asymmetric-cut {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#0e0e10]/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_24px_48px_rgba(0,244,254,0.08)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-none">
+<button class="text-[#CCFF00] hover:bg-[#262528] transition-colors scale-95 active:scale-90 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-space-grotesk uppercase tracking-tighter font-bold text-[#CCFF00]">MATCH RESULTS</h1>
+<button class="text-[#CCFF00] hover:bg-[#262528] transition-colors scale-95 active:scale-90 duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-4 space-y-8 max-w-2xl mx-auto">
+<!-- Score Input Section -->
+<section class="mt-4">
+<div class="flex items-center justify-between gap-4 mb-8">
+<!-- Team A -->
+<div class="flex-1 text-center space-y-4">
+<div class="relative inline-block">
+<div class="w-24 h-24 rounded-sm bg-surface-container-highest flex items-center justify-center overflow-hidden border-t-2 border-secondary">
+<img class="w-full h-full object-cover opacity-80" data-alt="professional esports team logo with geometric shield design in neon cyan and black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfGiim3UhtRF5B9Z31VUFarEbvz3pEAJXFoR9BdLa4TkrvBijx4aBivni1haiBuIPOvSmJpdwQ5vjJ3UeRJYnEPvW_OHLVuX02xACL4WDJu7_PR7eg9NQUvHGQu6xT_mPDg8PLThJ9Wy8-4264ujcC5_pizIW6a8mKP7vcAFWh635y3lAcGGcbU5PgWJAudNSZ6O7VpFmt9w1BG_4SHvKx8yZjsINJH-4CUNWebLzxAIBcYAV0iPyLJEaLXx7tK8r9f9q13dpoYTU"/>
+</div>
+<div class="absolute -top-2 -right-2 bg-secondary text-on-secondary px-2 py-0.5 rounded-sm font-label text-[10px] font-bold">HOME</div>
+</div>
+<div>
+<h2 class="font-headline font-bold text-xl uppercase tracking-tighter">TITANS ESC</h2>
+<p class="font-label text-xs text-secondary-dim uppercase tracking-widest">RANK #12</p>
+</div>
+<div class="mt-4">
+<input class="w-20 bg-surface-container-highest border-none text-center font-headline text-4xl font-black text-primary p-4 rounded-md focus:ring-2 focus:ring-primary-fixed" type="number" value="16"/>
+</div>
+</div>
+<!-- VS Divider -->
+<div class="flex flex-col items-center gap-2">
+<div class="h-px w-8 bg-outline-variant opacity-30"></div>
+<span class="font-headline font-black italic text-outline-variant opacity-50 text-2xl">VS</span>
+<div class="h-px w-8 bg-outline-variant opacity-30"></div>
+</div>
+<!-- Team B -->
+<div class="flex-1 text-center space-y-4">
+<div class="relative inline-block">
+<div class="w-24 h-24 rounded-sm bg-surface-container-highest flex items-center justify-center overflow-hidden border-t-2 border-error">
+<img class="w-full h-full object-cover opacity-80" data-alt="modern gaming clan logo featuring an aggressive wolf silhouette with red neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSQveHITYvx_zeAw9hED1ZUKnEYPti5hFtkZrrOciLvORs0GI_YCuB2lbMSCxSqjatU24Fzc_WIduQO8Y3L0pqJpHOnl5jVXlr9zqZwuALcQperrug0S3prkrOxC6wBqNjEWZ-zmyuisBxbmZeYG22bhT7LzSkAbdVq7_swQ3ARh2oB0_bydLlp3inzZy3RguRKncysLzuIf_xfttWAR7QVLQaqqik4iIx4RC0finIBbNQDmmwqwiYdMXQ2N0mWNLyY83COmobmEc"/>
+</div>
+<div class="absolute -top-2 -right-2 bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-sm font-label text-[10px] font-bold">AWAY</div>
+</div>
+<div>
+<h2 class="font-headline font-bold text-xl uppercase tracking-tighter">ROGUE SQUAD</h2>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">RANK #28</p>
+</div>
+<div class="mt-4">
+<input class="w-20 bg-surface-container-highest border-none text-center font-headline text-4xl font-black text-on-surface p-4 rounded-md focus:ring-2 focus:ring-primary-fixed" placeholder="0" type="number"/>
+</div>
+</div>
+</div>
+<!-- Dynamic Outcome Message -->
+<div class="bg-surface-container p-4 rounded-md border-l-4 border-primary flex items-center justify-between">
+<div>
+<span class="font-label text-[10px] text-primary uppercase font-bold tracking-widest">CURRENT SELECTION</span>
+<p class="font-headline font-bold text-lg">TITANS ESC VICTORY</p>
+</div>
+<div class="text-right">
+<span class="font-label text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">ELO CHANGE</span>
+<p class="font-headline font-bold text-lg text-primary">+24.5</p>
+</div>
+</div>
+</section>
+<!-- Attendance List -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h3 class="font-headline font-bold text-lg uppercase tracking-tighter">PLAYER ATTENDANCE</h3>
+<span class="font-label text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">6 PLAYERS TOTAL</span>
+</div>
+<div class="grid grid-cols-1 gap-2">
+<!-- Player 1 -->
+<div class="group flex items-center justify-between bg-surface-container-low hover:bg-surface-container-highest transition-colors p-3 rounded-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-secondary-fixed p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="portrait of a professional male esports player with headset in dramatic cyan lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxX7bgTAEnmZ8GxSWf_GnLGBISVVjLLJGnD7i6egXqdJcoWCFTde8tsT1PlLxZoTXhtvV_RQd2IMq2f6MIbYGqxX4GIQBXsgIUJiCWhkWTeBWIeIkiw-J04P9IU4lpBkS6eo4gGEob8fmean18HYFt1n_Vflg69IOO3poF5eN-alFKokB6Kefedhn6P5iLHxXNITVQaDvIceiMsSuzQToDAONRMJmp-iiqHd8tMdRIO8OrkgjlhsKJEpdik1G172cnGhR0-TXyJEQ"/>
+</div>
+<div>
+<p class="font-headline font-bold leading-none">vV_GHOST_Vv</p>
+<p class="font-label text-[10px] text-secondary tracking-widest uppercase">DIAMOND I</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary-fixed font-label text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        PRESENT
+                    </button>
+</div>
+<!-- Player 2 -->
+<div class="group flex items-center justify-between bg-surface-container-highest p-3 rounded-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-tertiary-fixed p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="close up of a competitive gamer profile photo with yellow stadium lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFZFlmW9ZeBDyBpDWUHPp7iqjOp3EyJVecwLa8FGBDK4qBVEuu6zZ0vXhSXt0b_cYh4RbSsU_M-6hsT3naf8ud13n78o5RT5lcLGM0yTDWv2wxL8VUy1SRcqsTFl2g70ShQ8JMLc0do4_xWpyJpUThjWJcSs43Sp9o6-NdJ4aWRmewMu0og-7qiOcPuZ0ad6SskK90GU5ZxW7lZUvZC1f202j--If-7Meu_Ptm8zjI86LnK3cVSof2ErTmcb2XV-79DyzNcw1qOJI"/>
+</div>
+<div>
+<p class="font-headline font-bold leading-none">KYLO_REND</p>
+<p class="font-label text-[10px] text-tertiary tracking-widest uppercase">GOLD III</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary-fixed font-label text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        PRESENT
+                    </button>
+</div>
+<!-- Player 3 (Absent example) -->
+<div class="group flex items-center justify-between bg-surface-container-low opacity-50 p-3 rounded-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-outline-variant p-0.5">
+<img class="w-full h-full rounded-full object-cover grayscale" data-alt="headshot of a young male gamer in dark streetwear neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxYBZFqnciiadeFaA6GAAk2-Gv5uWZQEpQOJGN_Jymc54fnW5N1Ql2njwThZDTZO4cCJV96e6zlqI3KeKCA2Dz0SlMVfFNnq6KX9eoMbms1YBhZheYF8fRdL83GBRy3YBUXW4zIkDYcmQGuqz5Wrg6HX2MmU4XY9zfnQoaViy9eyTW19j9FgQlJn5c-wr81422kPD1AcQMRYOIN1uti39IlidaTlVgkh_CNcMuWcBuuWvxCGdukky2quk9Vtjg3V6L8jUP_F-AzN8"/>
+</div>
+<div>
+<p class="font-headline font-bold leading-none">NO_SHOW_JOE</p>
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">UNRANKED</p>
+</div>
+</div>
+<button class="bg-surface-variant text-on-surface-variant font-label text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        ABSENT
+                    </button>
+</div>
+<!-- Player 4 -->
+<div class="group flex items-center justify-between bg-surface-container-low hover:bg-surface-container-highest transition-colors p-3 rounded-sm">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full border-2 border-primary-fixed p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="digital avatar of a gamer with vibrant green lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlmjNiST5jrL2bbzCzu1jXMETo0PEAYG_muJISAWA8EnTia7GMyI7yADSXAMh9n74fTUvebwbtzy_XYXL4s5FTnve5S40T9z8uhGfprSMbH2iLJ6jIZoMm1c8EY57wvinm6OdbUSpIGyw-qZBCpJXnGODenGULak-VcMVkj2d4KLWkBVD13Bf74d5b3G1NqZZ_NPAh-yNFn-O13m9Ik5qdd_Fw7-QFdDelmqXD5jNQnW_ccttYDNT_cu2o8y_A05QrpebiIVDSYIs"/>
+</div>
+<div>
+<p class="font-headline font-bold leading-none">CHRONO_1</p>
+<p class="font-label text-[10px] text-primary tracking-widest uppercase">PLATINUM II</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary-fixed font-label text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        PRESENT
+                    </button>
+</div>
+</div>
+</section>
+<!-- Submit Button Container -->
+<div class="pt-4 pb-12">
+<button class="w-full kinetic-gradient py-5 rounded-full flex items-center justify-center gap-3 group active:scale-95 transition-transform">
+<span class="font-headline font-black text-on-primary-fixed uppercase tracking-[0.2em] text-lg">SUBMIT MATCH RESULT</span>
+<span class="material-symbols-outlined text-on-primary-fixed font-bold group-hover:translate-x-2 transition-transform" data-icon="send">send</span>
+</button>
+<p class="text-center font-label text-[9px] text-on-surface-variant uppercase mt-4 tracking-widest">FINAL SUBMISSION CANNOT BE UNDONE. BOTH TEAM CAPTAINS MUST CONFIRM.</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-[#0e0e10]/80 backdrop-blur-2xl z-50 border-t border-white/5">
+<a class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#CCFF00]/10 rounded-sm py-1 px-4 spring-easing duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="font-lexend text-[10px] uppercase font-bold tracking-widest">LOBBY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 opacity-60 hover:text-[#00f4fe] transition-all spring-easing duration-200 px-4" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-lexend text-[10px] uppercase font-bold tracking-widest">STATS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 opacity-60 hover:text-[#00f4fe] transition-all spring-easing duration-200 px-4" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-lexend text-[10px] uppercase font-bold tracking-widest">SOCIAL</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 opacity-60 hover:text-[#00f4fe] transition-all spring-easing duration-200 px-4" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend text-[10px] uppercase font-bold tracking-widest">PROFILE</span>
+</a>
+</nav>
+</body></html>

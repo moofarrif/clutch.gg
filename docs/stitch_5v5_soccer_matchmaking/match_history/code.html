@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#004346",
+                        "inverse-surface": "#fcf8fb",
+                        "error-container": "#b92902",
+                        "on-primary-fixed": "#3a4a00",
+                        "surface-variant": "#262528",
+                        "primary-fixed": "#cafd00",
+                        "inverse-on-surface": "#565557",
+                        "on-error-container": "#ffd2c8",
+                        "secondary-container": "#00696e",
+                        "primary-fixed-dim": "#beee00",
+                        "error": "#ff7351",
+                        "outline-variant": "#48474a",
+                        "tertiary-fixed": "#ffd709",
+                        "on-tertiary": "#655400",
+                        "on-surface": "#f9f5f8",
+                        "background": "#0e0e10",
+                        "inverse-primary": "#516700",
+                        "primary-container": "#cafd00",
+                        "on-secondary-container": "#dffdff",
+                        "on-tertiary-fixed": "#453900",
+                        "tertiary-dim": "#efc900",
+                        "primary-dim": "#beee00",
+                        "tertiary-container": "#ffd709",
+                        "surface-container-high": "#1f1f22",
+                        "on-error": "#450900",
+                        "secondary-fixed": "#00f4fe",
+                        "surface-container-lowest": "#000000",
+                        "surface-container-highest": "#262528",
+                        "primary": "#f3ffca",
+                        "outline": "#767577",
+                        "surface-bright": "#2c2c2f",
+                        "tertiary": "#ffe792",
+                        "on-tertiary-container": "#5b4b00",
+                        "surface-tint": "#f3ffca",
+                        "on-primary-fixed-variant": "#526900",
+                        "surface-container-low": "#131315",
+                        "surface": "#0e0e10",
+                        "on-surface-variant": "#adaaad",
+                        "on-secondary": "#00575b",
+                        "on-secondary-fixed-variant": "#006266",
+                        "secondary": "#00f4fe",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "tertiary-fixed-dim": "#efc900",
+                        "secondary-fixed-dim": "#00e5ee",
+                        "on-primary": "#516700",
+                        "error-dim": "#d53d18",
+                        "surface-dim": "#0e0e10",
+                        "surface-container": "#19191c",
+                        "secondary-dim": "#00e5ee",
+                        "on-background": "#f9f5f8",
+                        "on-primary-container": "#4a5e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0e0e10;
+            color: #f9f5f8;
+            font-family: 'Manrope', sans-serif;
+        }
+        .clutch-gradient {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0e0e10]/70 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#CCFF00] cursor-pointer hover:bg-[#262528] transition-colors p-2 rounded-full active:scale-95" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-['Space_Grotesk'] uppercase tracking-tight font-bold text-lg text-[#CCFF00]">MATCH HISTORY</h1>
+</div>
+<span class="material-symbols-outlined text-[#CCFF00] cursor-pointer hover:bg-[#262528] transition-colors p-2 rounded-full active:scale-95" data-icon="tune">tune</span>
+</header>
+<main class="pt-20 pb-32 px-4 max-w-4xl mx-auto">
+<!-- Summary Stats Bento-ish Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
+<div class="bg-surface-container p-6 rounded-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="z-10">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">TOTAL MATCHES</p>
+<h2 class="font-headline font-bold text-4xl italic tracking-tighter">482</h2>
+</div>
+<div class="absolute -right-2 -bottom-2 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="sports_esports">sports_esports</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="z-10">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">WIN RATE</p>
+<h2 class="font-headline font-bold text-4xl italic tracking-tighter text-[#CCFF00]">64.2<span class="text-xl">%</span></h2>
+</div>
+<div class="absolute -right-2 -bottom-2 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="show_chart">show_chart</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-md flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="z-10">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">CURRENT STREAK</p>
+<h2 class="font-headline font-bold text-4xl italic tracking-tighter text-secondary">5W</h2>
+</div>
+<div class="absolute -right-2 -bottom-2 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="local_fire_department">local_fire_department</span>
+</div>
+</div>
+</section>
+<!-- Filters/Subheader -->
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline font-bold text-xl uppercase tracking-tighter italic">Recent Encounters</h3>
+<div class="flex gap-2">
+<button class="bg-surface-container-highest text-on-surface px-4 py-1.5 rounded-full text-[10px] font-label font-bold uppercase tracking-widest border border-outline-variant/20">All</button>
+<button class="bg-surface-container-low text-on-surface-variant px-4 py-1.5 rounded-full text-[10px] font-label font-bold uppercase tracking-widest hover:bg-surface-container-high transition-colors">Competitive</button>
+</div>
+</div>
+<!-- Match Cards List -->
+<div class="space-y-4">
+<!-- Win Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all duration-300 rounded-sm overflow-hidden group relative">
+<!-- Rank Glint for Diamond/High Rank UI style -->
+<div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-secondary/20 to-transparent pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 gap-6">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center min-w-[80px]">
+<span class="font-headline font-black text-3xl tracking-tighter text-[#CCFF00] group-hover:scale-110 transition-transform italic">WIN</span>
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant mt-1">22 MAY 2024</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30 hidden md:block"></div>
+<div>
+<p class="font-headline font-bold text-lg leading-tight uppercase tracking-tight">Cyber-Stadium Alpha</p>
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Ranked Match • 5v5</p>
+</div>
+</div>
+<div class="flex flex-1 justify-center items-center gap-8 md:px-8">
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter">13</span>
+</div>
+<div class="font-label text-[10px] text-on-surface-variant">VS</div>
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter opacity-40">07</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6 md:min-w-[200px]">
+<div class="text-right">
+<span class="font-headline font-black text-[#CCFF00] text-xl tracking-tighter">+24 ELO</span>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Diamond II</p>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container px-6 py-3 rounded-full text-[10px] font-label font-bold uppercase tracking-[0.2em] transition-all active:scale-95">View Details</button>
+</div>
+</div>
+</div>
+<!-- Loss Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all duration-300 rounded-sm overflow-hidden group relative">
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 gap-6">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center min-w-[80px]">
+<span class="font-headline font-black text-3xl tracking-tighter text-error group-hover:scale-110 transition-transform italic opacity-80">LOSS</span>
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant mt-1">21 MAY 2024</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30 hidden md:block"></div>
+<div>
+<p class="font-headline font-bold text-lg leading-tight uppercase tracking-tight">The Void District</p>
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Tournament • 5v5</p>
+</div>
+</div>
+<div class="flex flex-1 justify-center items-center gap-8 md:px-8">
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter opacity-40">09</span>
+</div>
+<div class="font-label text-[10px] text-on-surface-variant">VS</div>
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter">13</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6 md:min-w-[200px]">
+<div class="text-right">
+<span class="font-headline font-black text-on-surface-variant text-xl tracking-tighter">-18 ELO</span>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Diamond II</p>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container px-6 py-3 rounded-full text-[10px] font-label font-bold uppercase tracking-[0.2em] transition-all active:scale-95">View Details</button>
+</div>
+</div>
+</div>
+<!-- Draw Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all duration-300 rounded-sm overflow-hidden group relative">
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 gap-6">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center min-w-[80px]">
+<span class="font-headline font-black text-3xl tracking-tighter text-on-surface-variant group-hover:scale-110 transition-transform italic">DRAW</span>
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant mt-1">20 MAY 2024</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30 hidden md:block"></div>
+<div>
+<p class="font-headline font-bold text-lg leading-tight uppercase tracking-tight">Neo-Tokyo Ridge</p>
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Casual • 5v5</p>
+</div>
+</div>
+<div class="flex flex-1 justify-center items-center gap-8 md:px-8">
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter">15</span>
+</div>
+<div class="font-label text-[10px] text-on-surface-variant">VS</div>
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter">15</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6 md:min-w-[200px]">
+<div class="text-right">
+<span class="font-headline font-black text-on-surface-variant text-xl tracking-tighter">+0 ELO</span>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Diamond II</p>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container px-6 py-3 rounded-full text-[10px] font-label font-bold uppercase tracking-[0.2em] transition-all active:scale-95">View Details</button>
+</div>
+</div>
+</div>
+<!-- Win Card 2 -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-all duration-300 rounded-sm overflow-hidden group relative">
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 gap-6">
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center justify-center min-w-[80px]">
+<span class="font-headline font-black text-3xl tracking-tighter text-[#CCFF00] group-hover:scale-110 transition-transform italic">WIN</span>
+<span class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant mt-1">19 MAY 2024</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30 hidden md:block"></div>
+<div>
+<p class="font-headline font-bold text-lg leading-tight uppercase tracking-tight">Apex Spire</p>
+<p class="font-label text-[10px] text-on-surface-variant tracking-widest uppercase">Ranked Match • 5v5</p>
+</div>
+</div>
+<div class="flex flex-1 justify-center items-center gap-8 md:px-8">
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter">13</span>
+</div>
+<div class="font-label text-[10px] text-on-surface-variant">VS</div>
+<div class="flex flex-col items-center">
+<span class="font-headline font-extrabold text-3xl tracking-tighter opacity-40">02</span>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-6 md:min-w-[200px]">
+<div class="text-right">
+<span class="font-headline font-black text-[#CCFF00] text-xl tracking-tighter">+28 ELO</span>
+<p class="font-label text-[9px] uppercase tracking-widest text-on-surface-variant">Diamond II</p>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container px-6 py-3 rounded-full text-[10px] font-label font-bold uppercase tracking-[0.2em] transition-all active:scale-95">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Map Background (Asymmetric UI Highlight) -->
+<div class="mt-12 relative rounded-md overflow-hidden h-64 group cursor-pointer">
+<img alt="Arena" class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700" data-alt="cinematic interior of a futuristic esports arena with neon light accents and high-tech broadcasting equipment in cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHwJGaxfb-UeVJJeFxncfwrIVLsFBAsXkzaeRLcVgRw52h0vu-9pgEHNMz_7hJJzHFrw1bjlFz6OXTy-dSGtA_iPafcVv30la0D8SZHVi6BsIjwuMHKYdMMEN4fL_MZgGyqEOZFjZQ6Di5T7ZHbF7oHmbIl2r-j8mtMc4SdwnNqglOX0zy0WJdpgp6jYFSq5fP8JSTgh_JRMYlhhI5-6mwqeopaN-GYag7FgY9V4XSueRc2jH12-LdlKbjLXZ4AkJOqk8ax88J2GQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<p class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Upcoming Venue</p>
+</div>
+<h3 class="font-headline font-black text-4xl uppercase tracking-tighter italic">Starlight Dome</h3>
+<p class="font-body text-on-surface-variant text-sm mt-1">High-altitude arena in Singapore • Max Capacity 20k</p>
+</div>
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="location_on">location_on</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-4 bg-[#19191c]/80 backdrop-blur-2xl z-50 rounded-t-sm shadow-[0px_-24px_48px_rgba(0,244,254,0.08)]">
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#00f4fe] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="sports_esports">sports_esports</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest">LOBBY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#CCFF00]/10 rounded-full p-2 px-4 transition-all scale-110 cursor-pointer">
+<span class="material-symbols-outlined mb-0.5" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest">HISTORY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#00f4fe] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="military_tech">military_tech</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest">RANK</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#00f4fe] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest">SQUAD</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 hover:text-[#00f4fe] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest">PROFILE</span>
+</div>
+</nav>
+</body></html>

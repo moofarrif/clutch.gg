@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLUTCH.GG | Match Lobby</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Lexend:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#5b4b00",
+                    "inverse-on-surface": "#565557",
+                    "surface-container": "#19191c",
+                    "surface": "#0e0e10",
+                    "secondary-dim": "#00e5ee",
+                    "background": "#0e0e10",
+                    "secondary-fixed-dim": "#00e5ee",
+                    "outline-variant": "#48474a",
+                    "on-tertiary": "#655400",
+                    "inverse-surface": "#fcf8fb",
+                    "on-primary": "#516700",
+                    "error-container": "#b92902",
+                    "on-secondary-fixed": "#004346",
+                    "on-secondary-container": "#dffdff",
+                    "on-tertiary-fixed-variant": "#665500",
+                    "tertiary-container": "#ffd709",
+                    "primary": "#f3ffca",
+                    "tertiary": "#ffe792",
+                    "surface-variant": "#262528",
+                    "on-primary-fixed-variant": "#526900",
+                    "secondary": "#00f4fe",
+                    "on-secondary-fixed-variant": "#006266",
+                    "surface-container-lowest": "#000000",
+                    "primary-container": "#cafd00",
+                    "on-error-container": "#ffd2c8",
+                    "primary-fixed": "#cafd00",
+                    "surface-bright": "#2c2c2f",
+                    "tertiary-fixed": "#ffd709",
+                    "tertiary-fixed-dim": "#efc900",
+                    "surface-container-highest": "#262528",
+                    "on-surface": "#f9f5f8",
+                    "on-primary-fixed": "#3a4a00",
+                    "surface-container-low": "#131315",
+                    "error-dim": "#d53d18",
+                    "on-background": "#f9f5f8",
+                    "tertiary-dim": "#efc900",
+                    "secondary-fixed": "#00f4fe",
+                    "surface-container-high": "#1f1f22",
+                    "on-tertiary-fixed": "#453900",
+                    "on-secondary": "#00575b",
+                    "primary-dim": "#beee00",
+                    "primary-fixed-dim": "#beee00",
+                    "on-error": "#450900",
+                    "outline": "#767577",
+                    "on-surface-variant": "#adaaad",
+                    "inverse-primary": "#516700",
+                    "error": "#ff7351",
+                    "secondary-container": "#00696e",
+                    "surface-dim": "#0e0e10",
+                    "surface-tint": "#f3ffca",
+                    "on-primary-container": "#4a5e00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Space Grotesk"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Lexend"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .rank-glow-diamond {
+            box-shadow: 0 0 15px rgba(0, 244, 254, 0.4);
+        }
+        .gradient-mesh {
+            background-color: #0e0e10;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(202, 253, 0, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(0, 244, 254, 0.05) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#0e0e10]/80 dark:bg-[#0e0e10]/80 backdrop-blur-xl docked full-width top-0 z-50 transition-colors duration-300 shadow-[0px_10px_30px_rgba(0,0,0,0.5)] sticky">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-secondary flex items-center justify-center bg-surface-container-highest overflow-hidden">
+<img alt="Pro Badge" class="w-full h-full object-cover" data-alt="Close up of a futuristic neon cyan diamond shaped holographic rank badge for an elite level video game player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Dfk3yXH7UkUXOcsgY1Dq0rZLZkB5BKXtEUYJ85Byjk3nkz05P1iN75KsYEw1rqyih6xy6ABuCW0F1GGF4yTxpewe6y-dU7xz_-MrGQpX7kTxhIxpE4W9VTTDMhRlCQXNzDy-ZJnK0m4h5BypRo-CyLMlkvrwCuqt4wxnRUqdt2HNXdwm8ym0AN8JYWba8zWzD2h-4GxS8hXtO_Vqio0rVu2gY2xRlgFjBGUPW8dkLSmEk7x4EQyn1IMuE1bXP-JXWF0GOjxMaDk"/>
+</div>
+<h1 class="text-[#CCFF00] font-black italic tracking-tighter text-2xl font-['Space_Grotesk'] uppercase">CLUTCH.GG</h1>
+</div>
+<button class="text-[#f3ffca]/60 hover:bg-[#262528] transition-all p-2 rounded-xl active:scale-95 duration-150">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="pb-32 gradient-mesh min-h-screen">
+<!-- Map View Header -->
+<section class="relative h-64 w-full overflow-hidden">
+<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Aerial cinematic drone shot of a high-end urban football pitch with synthetic turf under dramatic stadium floodlights at night in London" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK4MBwDhbBCkeG6ZFAMt2nWxhWBWKrns7NnRTphIifZfgmsaIVGEIS04ilQ8LRS11_s-vCdZiyUUVo3fSX3y_7P7kqoVFkvZqkoMXOBEl5pVqfBdUAWVATQJSPUyLGCrC4QO7ByecBFX2XY0OYuH3xcMXhYME6QOrmlD00XJ1nxf7k7869YxEcWoF-cLsGASg478NtrkOeeEF8SU8s4o445yOPLTl42NqawQzmY7L_NsSLhhUEomq02nZVOnCd79Qw1ksxWApZ5oM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary-container text-on-primary-container font-label text-[10px] uppercase font-bold px-2 py-0.5 rounded-sm">LIVE LOBBY</span>
+<span class="text-secondary font-label text-[10px] uppercase font-bold tracking-widest flex items-center gap-1">
+<span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                        Waiting for players...
+                    </span>
+</div>
+<h2 class="text-4xl font-headline font-extrabold uppercase tracking-tighter italic">Southbank Arena <span class="text-primary italic">5v5</span></h2>
+<p class="font-label text-on-surface-variant text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                    Belvedere Rd, London SE1 8XX
+                </p>
+</div>
+</section>
+<!-- Match Specs Bento -->
+<section class="px-6 -mt-8 relative z-10 grid grid-cols-3 gap-3">
+<div class="bg-surface-container-high p-4 rounded-md flex flex-col justify-between">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">Entry Fee</span>
+<p class="text-primary font-headline text-2xl font-bold italic">£12.50</p>
+</div>
+<div class="bg-surface-container-high p-4 rounded-md flex flex-col justify-between">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">Surface</span>
+<p class="text-on-surface font-headline text-xl font-bold uppercase">Synthetic</p>
+</div>
+<div class="bg-surface-container-high p-4 rounded-md flex flex-col justify-between border-r-2 border-primary">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">Format</span>
+<p class="text-on-surface font-headline text-2xl font-bold italic">5 VS 5</p>
+</div>
+</section>
+<!-- Player List -->
+<section class="px-6 mt-10">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h3 class="font-headline text-2xl font-black uppercase tracking-tight">Roster <span class="text-secondary">06/10</span></h3>
+<p class="font-label text-[11px] text-on-surface-variant uppercase tracking-widest">Competitive Tier: Platinum &amp; Above</p>
+</div>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-background bg-surface-container-highest"></div>
+<div class="w-8 h-8 rounded-full border-2 border-background bg-surface-container-highest"></div>
+<div class="w-8 h-8 rounded-full border-2 border-background bg-surface-container-highest"></div>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Player 1: Diamond -->
+<div class="bg-surface-container-highest p-1 rounded-md flex items-center justify-between group cursor-pointer hover:bg-surface-bright transition-all">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-14 h-14 object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a focused young male athlete with sharp features in a dark professional sports jersey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTGvadQ99O6WeOLI1w3PjEIoRsUtiGntbwc4oVyY6hF3nDRELlk7u-ezj4ANjocundrX09gRyrdU1INOTEPiwZ44IFH05DaC9_5X4mR3KVWjT9II6lun84wIEEbdjh83akj_KABBchD_2zKGw-UbtyeuFCOHZTdlAymr3A5B-HCC1M6dJcEigK4Gym3eif5rcGPmdU1pggF8ROLRvL6VDG1THyYc5IwD8Z13zSs0_pA0uxpv1r0Rbyeeb3Gst_2jJ_aA7VEack1EI"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary flex items-center justify-center rounded-full rank-glow-diamond">
+<span class="material-symbols-outlined text-[14px] text-on-secondary" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+</div>
+<div>
+<p class="font-headline font-bold text-lg uppercase leading-none">J. DONOVAN</p>
+<p class="font-label text-[10px] text-secondary tracking-tighter">DIAMOND II • 88 CLUTCH RATING</p>
+</div>
+</div>
+<div class="pr-4 flex items-center gap-4">
+<div class="text-right">
+<span class="block font-label text-[9px] text-on-surface-variant uppercase">Position</span>
+<span class="font-headline font-black italic text-primary">FWD</span>
+</div>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-all">verified</span>
+</div>
+</div>
+<!-- Player 2: Platinum -->
+<div class="bg-surface-container p-1 rounded-md flex items-center justify-between group hover:bg-surface-container-highest transition-all">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-14 h-14 object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all" data-alt="Dynamic portrait of a professional female football player with intense gaze wearing a dark technical mesh top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMomQK4E-ZmY3_AY-K_o1jVbKY4SVWfd5l65w5LrJmt2lZydHodU1K-F_hc9N5iD6PokwwxjBjQ_yLHNrJaTyHKRR_0nwwquY2Y8Pf44AAiJQ4IX1VqK1cS5OmcMAtWOpNEcGfDv3weG8gdLVWWD7xomsadZdx5mHRNoFhlzQArG1qD1wVecNG1QN6B1D_AbH7z4BPezX2_ULRSnKguopFIIg6jBGKJin5f1uv5DyOTgySPJdOkxbdlls2wdQLLSS6VUe6cnIdj_w"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-primary flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined text-[14px] text-on-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div>
+<p class="font-headline font-bold text-lg uppercase leading-none">A. LOMBARDI</p>
+<p class="font-label text-[10px] text-on-surface-variant tracking-tighter uppercase">PLATINUM III • 79 CLUTCH RATING</p>
+</div>
+</div>
+<div class="pr-4 flex items-center gap-4">
+<div class="text-right">
+<span class="block font-label text-[9px] text-on-surface-variant uppercase">Position</span>
+<span class="font-headline font-black italic text-on-surface">MID</span>
+</div>
+</div>
+</div>
+<!-- Player 3: Diamond -->
+<div class="bg-surface-container-highest p-1 rounded-md flex items-center justify-between group hover:bg-surface-bright transition-all">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-14 h-14 object-cover rounded-sm grayscale group-hover:grayscale-0 transition-all" data-alt="Side profile of a competitive male player in his 20s with a sharp buzzcut, atmospheric moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0tgLajIump88fBznfiMA7ybOkf4E3JOQOW5xkJ_KbkAZ6JvDpTjOM7Joez87u_3SRL7w-1eq7yoH4w4ORJatw3L6XyrHXrEMnajsTW0ZTgGacwuIoMoNVzCo_q-g8olR6wyQRUEUXfjNKcZ0oIPqRQzx6UL5O8KMufRI49ktEN2mOE8llRjwhAKOmdwR41SnhmtawIk18i3RRHe6du1pH18I0CBIq1IdpR_HDfIea4X7sSdlalvz8naI8Yq3tGfz__xgwBGszQxw"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary flex items-center justify-center rounded-full rank-glow-diamond">
+<span class="material-symbols-outlined text-[14px] text-on-secondary" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+</div>
+<div>
+<p class="font-headline font-bold text-lg uppercase leading-none">MARCUS R.</p>
+<p class="font-label text-[10px] text-secondary tracking-tighter">DIAMOND I • 84 CLUTCH RATING</p>
+</div>
+</div>
+<div class="pr-4">
+<div class="text-right">
+<span class="block font-label text-[9px] text-on-surface-variant uppercase">Position</span>
+<span class="font-headline font-black italic text-on-surface">DEF</span>
+</div>
+</div>
+</div>
+<!-- Empty Slots -->
+<div class="bg-surface-container-low border border-dashed border-outline-variant/30 p-4 rounded-md flex items-center justify-between opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-variant rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">add_circle</span>
+</div>
+<p class="font-headline font-bold text-sm uppercase text-outline">Slot 07 Open</p>
+</div>
+<span class="font-label text-[10px] text-outline-variant uppercase">Invites Pending</span>
+</div>
+<div class="bg-surface-container-low border border-dashed border-outline-variant/30 p-4 rounded-md flex items-center justify-between opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-variant rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">person_add</span>
+</div>
+<p class="font-headline font-bold text-sm uppercase text-outline">Slot 08 Open</p>
+</div>
+<span class="font-label text-[10px] text-outline-variant uppercase">Public Slot</span>
+</div>
+<div class="bg-surface-container-low border border-dashed border-outline-variant/30 p-4 rounded-md flex items-center justify-between opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-variant rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">person_add</span>
+</div>
+<p class="font-headline font-bold text-sm uppercase text-outline">Slot 09 Open</p>
+</div>
+<span class="font-label text-[10px] text-outline-variant uppercase">Public Slot</span>
+</div>
+</div>
+</section>
+<!-- Rules Section -->
+<section class="px-6 mt-12 mb-20">
+<h4 class="font-headline text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4">Match Protocols</h4>
+<div class="bg-surface-container p-6 rounded-md space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">timer</span>
+<div>
+<p class="font-headline font-bold text-sm uppercase">60 MINS GAMEPLAY</p>
+<p class="text-xs text-on-surface-variant font-body">No stoppage time. Continuous clock once match initiates.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">warning</span>
+<div>
+<p class="font-headline font-bold text-sm uppercase">STRICT FAIR PLAY</p>
+<p class="text-xs text-on-surface-variant font-body">Clutch.gg reporting system active. Toxicity results in rank reset.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Action Button Overlay -->
+<div class="fixed bottom-24 left-0 w-full px-6 z-50">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-black text-xl italic py-5 rounded-full flex items-center justify-center gap-3 shadow-[0px_24px_48px_rgba(202,253,0,0.2)] active:scale-95 transition-all uppercase">
+            Join Match
+            <span class="material-symbols-outlined font-bold">bolt</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#19191c]/90 dark:bg-[#19191c]/90 backdrop-blur-2xl z-50 rounded-t-lg shadow-[0px_-8px_24px_rgba(0,244,254,0.08)]">
+<div class="flex flex-col items-center justify-center text-gray-500 py-2 px-6 hover:text-[#f3ffca]">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Lexend'] text-[10px] uppercase font-semibold tracking-widest mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#262528] rounded-xl py-2 px-6 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="sports_soccer">sports_soccer</span>
+<span class="font-['Lexend'] text-[10px] uppercase font-semibold tracking-widest mt-1">Matches</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-500 py-2 px-6 hover:text-[#f3ffca]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Lexend'] text-[10px] uppercase font-semibold tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

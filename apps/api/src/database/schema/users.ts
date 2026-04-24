@@ -1,0 +1,32 @@
+import { pgTable, uuid, varchar, date, text, integer, real, boolean, timestamp, index } from 'drizzle-orm/pg-core';
+
+export const users = pgTable('users', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  email: varchar('email', { length: 255 }).unique().notNull(),
+  passwordHash: varchar('password_hash', { length: 255 }),
+  googleId: varchar('google_id', { length: 255 }).unique(),
+  appleId: varchar('apple_id', { length: 255 }).unique(),
+  name: varchar('name', { length: 50 }).notNull(),
+  birthDate: date('birth_date'),
+  city: varchar('city', { length: 100 }),
+  photoUrl: text('photo_url'),
+  mmr: integer('mmr').notNull().default(1000),
+  matchesPlayed: integer('matches_played').notNull().default(0),
+  wins: integer('wins').notNull().default(0),
+  losses: integer('losses').notNull().default(0),
+  conductScore: real('conduct_score').notNull().default(5.0),
+  isVerified: boolean('is_verified').notNull().default(false),
+  noShowCount: integer('no_show_count').notNull().default(0),
+  reliabilityBadge: boolean('reliability_badge').notNull().default(false),
+  pushEnabled: boolean('push_enabled').notNull().default(true),
+  matchReminder: boolean('match_reminder').notNull().default(true),
+  joinNotify: boolean('join_notify').notNull().default(true),
+  deletedAt: timestamp('deleted_at', { withTimezone: true }),
+  expoPushToken: text('expo_push_token'),
+  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+}, (t) => [
+  index('idx_users_mmr').on(t.mmr),
+  index('idx_users_email').on(t.email),
+  index('idx_users_deleted').on(t.deletedAt),
+]);

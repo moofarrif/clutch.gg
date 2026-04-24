@@ -1,0 +1,14 @@
+{
+  "extends": "@clutch/tsconfig/nestjs.json",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "../..",
+    "baseUrl": ".",
+    "paths": {
+      "@clutch/shared": ["../../packages/shared/src"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}

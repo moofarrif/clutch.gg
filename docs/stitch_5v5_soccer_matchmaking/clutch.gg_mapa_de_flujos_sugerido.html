@@ -1,0 +1,48 @@
+# Clutch.gg — Mapa de Flujos y Arquitectura de Diseño
+
+Hemos diseñado un ecosistema de **11 pantallas** que cubren los pilares del MVP. A continuación, organizo cómo estas pantallas se integran en los 5 flujos de tu arquitectura:
+
+---
+
+## 🟢 Flujo 1: Registro y Perfil
+*El "Onboarding" de alto impacto para convertir visitantes en jugadores.*
+
+1.  **Onboarding & Login** `{{DATA:SCREEN:SCREEN_2}}`: Entrada principal con social auth (Google/Apple).
+2.  **Player Profile** `{{DATA:SCREEN:SCREEN_8}}`: El centro de mando del jugador con sus estadísticas, MMR y rango.
+
+---
+
+## 🔵 Flujo 2 & 3: Match Discovery & Creación
+*El "Marketplace" de partidos, donde ocurre la acción.*
+
+1.  **Match Discovery** `{{DATA:SCREEN:SCREEN_11}}`: Listado principal con filtros por zona y nivel de MMR.
+2.  **Create Match** `{{DATA:SCREEN:SCREEN_18}}`: Formulario optimizado para que los organizadores publiquen partidos 5v5 rápidamente.
+3.  **Match Lobby** `{{DATA:SCREEN:SCREEN_17}}`: El punto de espera en tiempo real (Socket.io) mientras se completa el cupo de 10 jugadores.
+
+---
+
+## 🟡 Flujo 4: Matchmaking Core & Post-Game
+*La inteligencia competitiva del sistema.*
+
+1.  **Match Result Entry** `{{DATA:SCREEN:SCREEN_4}}`: Interfaz para capitanes donde reportan el marcador y confirman asistencia.
+2.  **Player Rating & ELO Update** `{{DATA:SCREEN:SCREEN_13}}`: Pantalla de gratificación tras el partido, mostrando el cambio de MMR y permitiendo valorar la conducta de los compañeros.
+
+---
+
+## 🟣 Flujo 5: Progresión y Comunidad
+*Retención a largo plazo y estatus social.*
+
+1.  **Global Leaderboard** `{{DATA:SCREEN:SCREEN_15}}`: El ranking competitivo (Bronce a Diamante).
+2.  **Match History** `{{DATA:SCREEN:SCREEN_6}}`: Registro detallado de victorias, derrotas y fluctuaciones de ELO.
+3.  **My Squad** `{{DATA:SCREEN:SCREEN_9}}`: Gestión de tu equipo fijo.
+4.  **Discover Squads** `{{DATA:SCREEN:SCREEN_12}}`: Reclutamiento para unirse a grupos de alto nivel.
+
+---
+
+## 🚀 Próximos Pasos Sugeridos
+¿Qué nos falta para que el diseño sea "Production-Ready"?
+- **Estados de Error/Vacíos:** Qué ve el usuario si no hay partidos cerca.
+- **Flujo de Notificaciones:** Centro de notificaciones para confirmaciones de BullMQ.
+- **Configuración de MMR Inicial:** Una pequeña pantalla de "quiz" o selección para determinar esos 1000 puntos iniciales.
+
+¿Te gustaría profundizar en alguno de estos detalles o prefieres ver cómo conectaríamos el flujo de invitaciones de amigos?

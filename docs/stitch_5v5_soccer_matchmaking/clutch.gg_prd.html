@@ -1,0 +1,47 @@
+# Clutch.gg - Arquitectura Production-Grade
+
+## Contexto
+App móvil de matchmaking para fútbol 5v5 en cancha sintética. Sistema ELO/MMR para balancear equipos entre desconocidos. Proyecto greenfield para un developer-fundador.
+
+## MVP Scope
+- Solo fútbol 5v5.
+- Expansión futura: basketball, volleyball.
+- Sin monetización inicial.
+
+## Flujos Confirmados
+
+### Flujo 1 — Registro
+1. Sign In con Email, Google o Apple (Passport + JWT pair).
+2. Crear perfil: nombre, fecha nacimiento, ciudad, foto.
+3. MMR inicial (default: 1000 ±20%).
+4. Verificación de identidad post-primer partido.
+
+### Flujo 2 — Crear Partido
+1. Formulario: fecha/hora, cancha/ubicación.
+2. Formato fijo: 5v5 (10 jugadores).
+3. Publicación → visible en mapa/listado.
+4. Invitación de amigos y real-time updates via Socket.io.
+
+### Flujo 3 — Unirse a Partido
+1. Filtrado por zona (PostGIS), horario y nivel MMR.
+2. Card de partido: cancha, hora, ocupación (X/10).
+3. "Unirse" con optimistic updates.
+4. Push notifications al creador.
+
+### Flujo 4 — Matchmaking Core
+1. BullMQ job para 10 confirmados → algoritmo draft.
+2. Formación de Team A y Team B (5v5).
+3. Notificaciones "Equipo listo".
+4. Votación de resultado (6/10 auto-confirm).
+5. ELO update (K=32 nuevos, K=16 veteranos).
+6. Conducta score (1-5 estrellas).
+
+### Flujo 5 — Perfil e Historial
+1. Stats, MMR actual, rango, conducta score.
+2. Historial de partidos.
+3. Rangos: 
+    - Bronce (<1100)
+    - Plata
+    - Oro
+    - Platino
+    - Diamante (1700+)

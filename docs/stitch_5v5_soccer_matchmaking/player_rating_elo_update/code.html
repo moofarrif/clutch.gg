@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post-Match Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-dim": "#efc900",
+                        "on-secondary-fixed-variant": "#006266",
+                        "on-error": "#450900",
+                        "tertiary": "#ffe792",
+                        "surface-container": "#19191c",
+                        "secondary-container": "#00696e",
+                        "on-tertiary-fixed-variant": "#665500",
+                        "error-container": "#b92902",
+                        "on-primary-container": "#4a5e00",
+                        "outline": "#767577",
+                        "surface-container-lowest": "#000000",
+                        "secondary-dim": "#00e5ee",
+                        "surface-dim": "#0e0e10",
+                        "on-surface-variant": "#adaaad",
+                        "on-primary": "#516700",
+                        "on-tertiary-fixed": "#453900",
+                        "tertiary-fixed-dim": "#efc900",
+                        "primary": "#f3ffca",
+                        "on-tertiary": "#655400",
+                        "on-secondary-fixed": "#004346",
+                        "primary-dim": "#beee00",
+                        "surface-container-low": "#131315",
+                        "surface": "#0e0e10",
+                        "error": "#ff7351",
+                        "surface-bright": "#2c2c2f",
+                        "secondary-fixed-dim": "#00e5ee",
+                        "secondary-fixed": "#00f4fe",
+                        "surface-container-high": "#1f1f22",
+                        "tertiary-container": "#ffd709",
+                        "on-surface": "#f9f5f8",
+                        "on-error-container": "#ffd2c8",
+                        "primary-fixed": "#cafd00",
+                        "on-primary-fixed": "#3a4a00",
+                        "surface-tint": "#f3ffca",
+                        "primary-container": "#cafd00",
+                        "on-tertiary-container": "#5b4b00",
+                        "background": "#0e0e10",
+                        "inverse-surface": "#fcf8fb",
+                        "error-dim": "#d53d18",
+                        "surface-variant": "#262528",
+                        "inverse-on-surface": "#565557",
+                        "on-secondary": "#00575b",
+                        "tertiary-fixed": "#ffd709",
+                        "secondary": "#00f4fe",
+                        "on-background": "#f9f5f8",
+                        "on-secondary-container": "#dffdff",
+                        "primary-fixed-dim": "#beee00",
+                        "inverse-primary": "#516700",
+                        "on-primary-fixed-variant": "#526900",
+                        "outline-variant": "#48474a",
+                        "surface-container-highest": "#262528"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Lexend"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-blur {
+            backdrop-filter: blur(24px);
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #f3ffca 0%, #cafd00 100%);
+        }
+        .asymmetric-cut {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<header class="bg-[#0e0e10]/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_24px_48px_rgba(0,244,254,0.08)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-none">
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 duration-200 text-[#CCFF00] hover:bg-[#262528] transition-colors p-2 rounded-sm">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline uppercase tracking-tighter font-bold text-[#CCFF00] text-xl">MATCH RESULTS</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline italic font-black text-xl text-[#CCFF00]">KINETIC PRO</span>
+<button class="scale-95 active:scale-90 duration-200 text-gray-400 hover:bg-[#262528] transition-colors p-2 rounded-sm">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-7xl mx-auto min-h-screen">
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<div class="md:col-span-12 lg:col-span-5 space-y-6">
+<div class="bg-surface-container p-8 rounded-sm relative overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-secondary/10 rounded-full blur-3xl group-hover:bg-secondary/20 transition-all"></div>
+<div class="relative z-10">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-2">Victory Progress</p>
+<h2 class="font-headline text-7xl font-extrabold tracking-tighter italic text-on-surface">
+                            +24 <span class="text-primary font-black">ELO</span>
+</h2>
+<div class="mt-8 space-y-3">
+<div class="flex justify-between font-label text-sm">
+<span class="text-on-surface-variant uppercase">Current Rating</span>
+<span class="text-on-surface font-bold">2,482 (Diamond IV)</span>
+</div>
+<div class="h-2 bg-surface-container-highest w-full rounded-full overflow-hidden">
+<div class="h-full bg-gradient-primary w-[72%] shadow-[0_0_15px_rgba(202,253,0,0.5)]"></div>
+</div>
+<div class="flex justify-between font-label text-[10px] text-on-surface-variant">
+<span>2,400</span>
+<span>2,600 NEXT RANK</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-sm border-l-2 border-secondary/30">
+<p class="font-label text-[10px] uppercase text-on-surface-variant mb-1">Combat Score</p>
+<p class="font-headline text-3xl font-bold">4,120</p>
+<div class="mt-2 flex items-center text-secondary text-xs font-bold">
+<span class="material-symbols-outlined text-sm mr-1">trending_up</span>
+<span>TOP 2%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-sm border-l-2 border-primary/30">
+<p class="font-label text-[10px] uppercase text-on-surface-variant mb-1">Win Streak</p>
+<p class="font-headline text-3xl font-bold">5 Wins</p>
+<div class="mt-2 flex items-center text-primary text-xs font-bold">
+<span class="material-symbols-outlined text-sm mr-1">local_fire_department</span>
+<span>HOT STREAK</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-12 lg:col-span-7 space-y-6">
+<div class="bg-surface-container-high p-8 rounded-sm">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="font-headline text-2xl font-black uppercase tracking-tight">Rate Your Teammates</h3>
+<p class="text-on-surface-variant text-sm mt-1 max-w-sm">Help improve the community by rating player conduct and sportsmanship.</p>
+</div>
+<div class="hidden md:block">
+<span class="font-label text-[10px] bg-secondary/10 text-secondary px-3 py-1 rounded-full uppercase font-bold tracking-widest">Team Delta</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 bg-surface-container-low hover:bg-surface-container-highest transition-colors group">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<div class="relative">
+<img alt="Player Avatar" class="w-14 h-14 rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Close up portrait of a young man with focused expression, gamer aesthetic, cyan neon lighting reflections on face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghj95G_pBI0RZi3IjRIHzYORdHU2rZAbG_4mbGe-DSF3vtCW7ZKgl_BNIwsSh9nA2Z-Nm9McpxEWO2VswWMfnNQ7lHqltJ9Mwb7Mu8o2BHzc9Eq5r59WHuhzzrUhkP5pGcvBovFBzC5EpRKLr7Pei_TPyR5smq4dNW9m1yJ3ws0-2TgCngtGJTZ1mtRAiqOu6ZVXa8e0_0SV_Q9QAK1uOqxIQM-wfdcvkbBJVObaaUDr8dh1YuTWPD5ufTJzJji1JTYWAqbAWghE"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-[#ffe792] flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary font-bold" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div>
+<p class="font-headline font-bold text-lg tracking-tight">V0RTEX_STRIKER</p>
+<p class="font-label text-[10px] text-secondary uppercase font-bold tracking-tighter">Support • Platinum III</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+</div>
+<div class="ml-2 w-[2px] h-8 bg-outline-variant opacity-20"></div>
+<button class="p-2 text-error-dim hover:bg-error/10 transition-colors rounded-sm">
+<span class="material-symbols-outlined">report</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 bg-surface-container-low hover:bg-surface-container-highest transition-colors group">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<div class="relative">
+<img alt="Player Avatar" class="w-14 h-14 rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Cyberpunk style gaming portrait of a person with high contrast lighting, purple and teal hues, sharp features" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxNdcWRJ6UhTyAq--nOHdgpEte2kiuoWsDk2dUEUugkcNItofEkF9RVofgV_RkJKyMUYIs3DYuk8P1lWpxpf7S_b9Ahy1sG5hHRIHZGXvkCiTzNmxnJCqieTRLcoBwDeA0W1SB9l2Bt-ott9A8U25_rJkVVQe2TVnslBFyXnVAqWHzYo68SUjycyVpJeZ2m_9rRfsVXfCHW1sFeX3efFVD9beDPvvWZaKKkx8ObK2jSNmXucPdp-Ky2dkO25sdIRqrlX-1eps9MGQ"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-secondary flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-[14px] text-on-secondary font-bold" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+</div>
+<div>
+<p class="font-headline font-bold text-lg tracking-tight">CYBER_KINETIC</p>
+<p class="font-label text-[10px] text-secondary uppercase font-bold tracking-tighter">Aggressor • Diamond II</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-primary text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-primary text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-primary text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-primary text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-primary text-on-primary transition-all active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+<div class="ml-2 w-[2px] h-8 bg-outline-variant opacity-20"></div>
+<button class="p-2 text-error-dim hover:bg-error/10 transition-colors rounded-sm">
+<span class="material-symbols-outlined">report</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between p-5 bg-surface-container-low hover:bg-surface-container-highest transition-colors group">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<div class="relative">
+<img alt="Player Avatar" class="w-14 h-14 rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Digital art of a hooded gamer figure, dark shadows, minimal neon highlights in orange, high performance competitive feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7ocS1d7sHG1SLEG0aG0z-Iyy8eBtFPRhlrEJ7EBiNR0P-ocuZVGKrSEjZ5VQEm-e3r9beKySph_f2prdFvXgUWwYniqU6R4Zef3_erW-QJBZUv-I5h8mGyNzlV2JypO58UeQ1CPYMAgChz1Z-FODM-idH-UPSxkPvpcmHFufpifn25D6Wsk1OFZT1l3sCb3Uu57cUr9_OQKod8qgUADLh3Gach-mI6oFH3zK6t9aF2Nu9Uu4gGSMkkJOg_mmzRYbJUKL1ZJH30P8"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-outline-variant flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface font-bold" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+</div>
+<div>
+<p class="font-headline font-bold text-lg tracking-tight">GHOST_MODE_ON</p>
+<p class="font-label text-[10px] text-secondary uppercase font-bold tracking-tighter">Tactical • Silver I</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-sm bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface-variant active:scale-90">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0;">star</span>
+</button>
+</div>
+<div class="ml-2 w-[2px] h-8 bg-outline-variant opacity-20"></div>
+<button class="p-2 text-error-dim hover:bg-error/10 transition-colors rounded-sm">
+<span class="material-symbols-outlined">report</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col md:flex-row gap-4">
+<button class="flex-1 bg-gradient-primary text-on-primary font-headline font-black py-4 px-8 rounded-full uppercase tracking-widest text-lg shadow-[0_8px_32px_rgba(202,253,0,0.3)] hover:brightness-110 active:scale-[0.98] transition-all">
+                            Done
+                        </button>
+<button class="bg-surface-container text-on-surface-variant font-headline font-bold py-4 px-8 rounded-full uppercase tracking-widest text-sm hover:text-on-surface border border-outline-variant/10 transition-all">
+                            Review Detailed Stats
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full bg-[#0e0e10]/80 backdrop-blur-2xl flex justify-around items-center px-4 py-3 pb-safe z-50 border-t border-white/5">
+<a class="flex flex-col items-center justify-center text-gray-500 opacity-60 hover:text-[#00f4fe] transition-all" href="#">
+<span class="material-symbols-outlined mb-1">sports_esports</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">LOBBY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#CCFF00] bg-[#CCFF00]/10 rounded-sm py-1 px-4" href="#">
+<span class="material-symbols-outlined mb-1">leaderboard</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">STATS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 opacity-60 hover:text-[#00f4fe] transition-all" href="#">
+<span class="material-symbols-outlined mb-1">group</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">SOCIAL</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-500 opacity-60 hover:text-[#00f4fe] transition-all" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label text-[10px] uppercase font-bold tracking-widest">PROFILE</span>
+</a>
+</nav>
+</body></html>

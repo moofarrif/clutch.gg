@@ -1,0 +1,7 @@
+export const ELO = {
+  INITIAL_MMR: 1000,
+  MMR_VARIANCE: 0.2,
+  K_FACTOR_NEW: 32,
+  K_FACTOR_VETERAN: 16,
+  VETERAN_THRESHOLD: 20,
+} as const;
